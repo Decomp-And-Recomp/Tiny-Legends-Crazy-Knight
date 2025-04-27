@@ -28,6 +28,9 @@ It was added because there was a LOT of android calls in source, which i didnt w
 Feel free to use it anywhere, except some stuff breaking or not working.
 
 ### Errors..? Bugs?
+
+Had to rename animationspeedmodify field in PlayerAnimationSynchronizer.cs because it was breaking serialization on compilation.
+
 TUIFont.cs was bugging out so i had to implement fix for it in Awake() method.
 
 TAudioManager.cs was breaking, had to do fix too. (line 29)

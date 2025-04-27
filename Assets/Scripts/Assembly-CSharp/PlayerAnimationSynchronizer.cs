@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(TAudioController))]
 public class PlayerAnimationSynchronizer : AnimationSynchronizer
 {
-	public float animationspeedmodify = 0.7f;
+	public float animationspeedmodify0 = 0.7f;
 
 	protected Crazy_Weapon weapon;
 
@@ -93,7 +93,7 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 
 	protected virtual bool CheckAnimation()
 	{
-		return Mathf.Abs(base.GetComponent<Animation>()["Attack01_Sword01_merge"].speed - 1f * animationspeedmodify) <= 0.01f;
+		return Mathf.Abs(base.GetComponent<Animation>()["Attack01_Sword01_merge"].speed - 1f * animationspeedmodify0) <= 0.01f;
 	}
 
 	protected virtual void ModifyAnimation()
@@ -171,21 +171,21 @@ public class PlayerAnimationSynchronizer : AnimationSynchronizer
 			base.GetComponent<Animation>()["Idle_Hammer01_celebrate01_merge"].layer = 5;
 			base.GetComponent<Animation>()["Idle_Sword01_celebrate01_merge"].layer = 5;
 			base.GetComponent<Animation>()["Idle_Bow01_celebrate01_merge"].layer = 5;
-			base.GetComponent<Animation>()["Attack01_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack02_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack03_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack04_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Skill01_Sword01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack01_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack02_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack03_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack04_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Skill01_Hammer01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack01_Axe01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack02_Axe01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack03_Axe01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Attack04_Axe01_merge"].speed = 1f * animationspeedmodify;
-			base.GetComponent<Animation>()["Skill01_Axe01_merge"].speed = 1f * animationspeedmodify;
+			base.GetComponent<Animation>()["Attack01_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack02_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack03_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack04_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Skill01_Sword01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack01_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack02_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack03_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack04_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Skill01_Hammer01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack01_Axe01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack02_Axe01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack03_Axe01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Attack04_Axe01_merge"].speed = 1f * animationspeedmodify0;
+			base.GetComponent<Animation>()["Skill01_Axe01_merge"].speed = 1f * animationspeedmodify0;
 			AddAnimationEvent();
 		}
 	}
