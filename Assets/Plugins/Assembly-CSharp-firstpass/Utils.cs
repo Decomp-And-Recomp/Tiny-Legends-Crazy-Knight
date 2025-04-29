@@ -10,7 +10,7 @@ public class Utils
 	static Utils()
 	{
 		string persistentDataPath = Application.persistentDataPath;
-		persistentDataPath += "/../Documents";
+		//persistentDataPath += "/../Documents"; retards
 		if (!Directory.Exists(persistentDataPath))
 		{
 			Directory.CreateDirectory(persistentDataPath);

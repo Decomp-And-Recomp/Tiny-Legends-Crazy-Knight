@@ -17,8 +17,12 @@
 ### Controls are implemented in UICrazyScene.cs  
 They dont compile on Non-Standalone platforms because they override some of the on-screen ones.  
 More comments on that in the script.  
+To hide the controls on PC `StandaloneDisable` was added in SceneTUI prefab**s**.
 
-### UI Inputs  
+### Save patch changed
+Check `Utils` class (initializator)
+
+### UI Inputs
 UI inputs for non standalone AND standalone platforms are implemented, yes.  
 They are located in TUIInputManagerIOS.cs and TUIInputManagerWindows.cs  
 For standalone platforms im currently swapping the IOS one with Windows one in TUIInputManager.cs
