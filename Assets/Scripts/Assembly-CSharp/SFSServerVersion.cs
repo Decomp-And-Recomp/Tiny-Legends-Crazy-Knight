@@ -117,6 +117,12 @@ public class SFSServerVersion : MonoBehaviour
 
 	protected IEnumerator Init()
 	{
+		yield return null;
+		Version = 1;
+		SFSServer = ServerX.serverIP;
+		SFSPort = ServerX.serverPort;
+        callback(1);
+        /*
 		WWW www = new WWW(url);
 		yield return www;
 		if (www.error != null)
@@ -162,6 +168,6 @@ public class SFSServerVersion : MonoBehaviour
 			{
 				callback_error();
 			}
-		}
-	}
+		}*/
+    }
 }
