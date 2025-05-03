@@ -6,9 +6,9 @@
 |Movement|Horizontal + Vertical|WASD/Up Down Left Right Arrows|
 |Look (Bow/Staff)|HorizontalLook + VerticalLook|N/A|
 |Look (Bow/Staff) Alt|N/A|Mouse Movement|
-|Attack|Attack|E/Mouse 0|
-|Roll|Roll|R/Mouse 1|
-|Skill|Skill|F/Mouse 2|
+|Attack|Attack|Space/Mouse 0|
+|Roll|Roll|Left Shift/Mouse 1|
+|Skill|Skill|Left Ctrl/Mouse 2|
 |Pause|Pause|Escape/Enter|
 |Revive|Revive|Q|
 
