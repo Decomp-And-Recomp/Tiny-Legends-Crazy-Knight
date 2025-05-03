@@ -279,7 +279,7 @@ public class ConnectAndTeam : MonoBehaviour
 
 	private void InitServer()
 	{
-		//serverName = TNetManager.Instance.GetHostAddresses(serverName);
+		if (ServerX.isDomain) serverName = TNetManager.Instance.GetHostAddresses(serverName);
 		if (serverName == string.Empty)
 		{
 			if (bNetBattleTest)
