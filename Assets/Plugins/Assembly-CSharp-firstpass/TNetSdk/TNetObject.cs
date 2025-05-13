@@ -497,7 +497,8 @@ namespace TNetSdk
 			{
 				return 0;
 			}
-			if (m_need_security && m_need_decrpty)
+			//if (m_need_security && m_need_decrpty)
+			if (false)
 			{
 				uint num = (uint)((data[0] << 24) | (data[1] << 16) | (data[2] << 8) | data[3]);
 				uint num2 = (uint)((data[4] << 24) | (data[5] << 16) | (data[6] << 8) | data[7]);
@@ -568,6 +569,7 @@ namespace TNetSdk
 				ushort val2 = 0;
 				if (packet.WatchUInt16(ref val2, 6))
 				{
+					Debug.LogError("OnPacket DISPATCHING " + val + ":" + val2);
 					dispatcher.DispatchEvent((PROTOCOLS)val, (CMD)val2, packet);
 				}
 			}
