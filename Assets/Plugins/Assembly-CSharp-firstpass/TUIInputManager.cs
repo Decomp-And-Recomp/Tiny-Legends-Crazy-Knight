@@ -8,14 +8,14 @@ public class TUIInputManager
 	{
 		if (Time.frameCount != m_lastFrameCount)
 		{
-#if UNITY_STANDALONE
+#if UNITY_STANDALONE || UNITY_EDITOR
 			TUIInputManagerWindows.UpdateInput();
 #else
 			TUIInputManageriOS.UpdateInput();
 #endif
         }
         m_lastFrameCount = Time.frameCount;
-#if UNITY_STANDALONE
+#if UNITY_STANDALONE || UNITY_EDITOR
         return TUIInputManagerWindows.GetInput();
 #else
         return TUIInputManageriOS.GetInput();
