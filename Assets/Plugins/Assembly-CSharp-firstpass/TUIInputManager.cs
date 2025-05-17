@@ -15,8 +15,8 @@ public class TUIInputManager
 #endif
         }
         m_lastFrameCount = Time.frameCount;
-        return TUIInputManagerWindows.GetInput();
 #if UNITY_STANDALONE
+        return TUIInputManagerWindows.GetInput();
 #else
         return TUIInputManageriOS.GetInput();
 #endif
