@@ -249,7 +249,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 7
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Recomp/_Triniti/Tlck/pass overmet15.keystore
+  AndroidKeystoreName: E:/Tiny-Legends-Crazy-Knight/pass overmet15.keystore
   AndroidKeyaliasName: tlck
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
