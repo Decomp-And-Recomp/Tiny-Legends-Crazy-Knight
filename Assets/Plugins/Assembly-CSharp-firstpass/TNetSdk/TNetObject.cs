@@ -569,7 +569,6 @@ namespace TNetSdk
 				ushort val2 = 0;
 				if (packet.WatchUInt16(ref val2, 6))
 				{
-					Debug.LogError("OnPacket DISPATCHING " + val + ":" + val2);
 					dispatcher.DispatchEvent((PROTOCOLS)val, (CMD)val2, packet);
 				}
 			}
