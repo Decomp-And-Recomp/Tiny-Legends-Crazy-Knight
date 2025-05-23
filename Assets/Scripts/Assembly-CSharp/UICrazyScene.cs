@@ -59,7 +59,7 @@ public class UICrazyScene : MonoBehaviour, TUIHandler
 			.FadeIn();
 		Movie();
 
-#if UNITY_STANDALONE
+#if UNITY_STANDALONE || UNITY_EDITOR
 		PCInputStart();
 #endif
     }
@@ -109,14 +109,14 @@ public class UICrazyScene : MonoBehaviour, TUIHandler
 			{
 				m_tui.HandleInput(input[i]);
             }
-#if UNITY_STANDALONE
+#if UNITY_STANDALONE || UNITY_EDITOR
             PCInput(); // DO NOT COMPILE ON NON TOUCHSCREEN, OVERRIDES TOUCH CONTROLS!!!
 #endif
         }
         m_imp.Update();
 	}
-#if UNITY_STANDALONE
-	Vector2 movement, lookMouse, lookAxis; // yes im not creating new vector every frame
+#if UNITY_STANDALONE || UNITY_EDITOR
+    Vector2 movement, lookMouse, lookAxis; // yes im not creating new vector every frame
     bool isShoot = false;
 
 	void PCInputStart()
