@@ -18,7 +18,7 @@ public class Crazy_Global
 		ShowProp = 8
 	}
 
-	public static bool IsTestVersion;
+	public static bool IsTestVersion = true;
 
 	protected static string SocialIP = string.Empty;
 
