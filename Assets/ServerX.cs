@@ -1,6 +1,6 @@
 ﻿public static class ServerX
 {
-    public const string configUrl = "recompilation.net/tnet/config-1.txt";
+    public const string configUrl = "recompilation.net/game/tnet-config-1.txt";
 
     const string gameId = "tlck";
 
