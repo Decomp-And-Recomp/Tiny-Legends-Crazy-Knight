@@ -138,7 +138,7 @@ namespace TNetSdk
 			}
 			inited = true;
 			m_reverse_heart_time = Time.time;
-			string key = KeyHolder.GetKey();
+			/*string key = KeyHolder.GetKey();
 			if (key != null && key.Length > 0)
 			{
 				m_need_security = true;
@@ -147,7 +147,8 @@ namespace TNetSdk
 			else
 			{
 				m_need_security = false;
-			}
+			}*/
+			m_need_security = false;
 		}
 
 		public void Update(float deltaTime)
