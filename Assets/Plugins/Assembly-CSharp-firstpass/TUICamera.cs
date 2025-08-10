@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
@@ -18,23 +20,23 @@ public class TUICamera : MonoBehaviour
 		base.transform.localPosition = Vector3.zero;
 		base.transform.localRotation = Quaternion.identity;
 		base.transform.localScale = Vector3.one;
-		base.GetComponent<Camera>().clearFlags = CameraClearFlags.Nothing;
-		base.GetComponent<Camera>().backgroundColor = Color.white;
-		base.GetComponent<Camera>().nearClipPlane = -128f;
-		base.GetComponent<Camera>().farClipPlane = 128f;
-		base.GetComponent<Camera>().orthographic = true;
-		base.GetComponent<Camera>().depth = depth;
-		base.GetComponent<Camera>().cullingMask = 1 << layer;
-		base.GetComponent<Camera>().aspect = width / height;
-		base.GetComponent<Camera>().orthographicSize = height / ((!hd) ? 2f : 4f);
+
+		Camera cam = GetComponent<Camera>();
+
+        cam.clearFlags = CameraClearFlags.Nothing;
+        cam.backgroundColor = Color.white;
+        cam.nearClipPlane = -128f;
+		cam.farClipPlane = 128f;
+		cam.orthographic = true;
+		cam.depth = depth;
+		cam.cullingMask = 1 << layer;
+		cam.aspect = width / height;
+		cam.orthographicSize = height / ((!hd) ? 2f : 4f);
 	}
 
 	private void GetScreenInfo(out float width, out float height, out bool hd)
 	{
-		width = 0f;
-		height = 0f;
-		hd = false;
-		float num = Mathf.Max(Screen.width, Screen.height);
+        float num = Mathf.Max(Screen.width, Screen.height);
 		float num2 = Mathf.Min(Screen.width, Screen.height);
 		if (num <= 1136f && num >= 960f && num <= 768f && num >= 640f)
 		{
